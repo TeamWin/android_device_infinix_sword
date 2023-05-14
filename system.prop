@@ -4,7 +4,6 @@ ro.hardware.gatekeeper=trustonic
 ro.hardware.kmsetkey=trustonic
 ro.mtk_trustonic_tee_support=1
 ro.crypto.volume.filenames_mode=aes-256-cts
-fbe.metadata.wrappedkey=true
 ro.sys.usb.bicr=no
 ro.sys.usb.storage.type=mtp
 ro.crypto.metadata.enabled=true

@@ -66,29 +66,19 @@ service keymaster-4-0 /system/bin/android.hardware.keymaster@4.0-service.truston
     oneshot
     seclabel u:r:recovery:s0
     
-on property:vendor.sys.listener.registered=true
-    start gatekeeper-1-0
+service keymaster_attestation-1-1 /system/bin/vendor.mediatek.hardware.keymaster_attestation@1.1-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
     
 on property:hwservicemanager.ready=true
+    start keystore2
     start mobicore
     start keymaster-4-0
     start gatekeeper-1-0
-    
-on property:ro.crypto.state=unsupported
-    stop mobicore
-    stop keymaster-4-0
-    stop gatekeeper-1-0
+    start keymaster_attestation-1-1
 
-on property:ro.crypto.state=unencrypted
-    stop mobicore
-    stop keymaster-4-0
-    stop gatekeeper-1-0
-
-on property:twrp.all.users.decrypted=true
-    stop mobicore
-    stop keymaster-4-0
-    stop gatekeeper-1-0
-    
 on boot
     start boot-hal-1-1
     start health-hal-2-1
