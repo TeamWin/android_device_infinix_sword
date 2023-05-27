@@ -93,9 +93,6 @@ on property:crypto.ready=0
     stop mobicore
     stop keymaster-4-0
     stop gatekeeper-1-0
-
-on post-fs-data
-    mkdir /data/vendor/key_provisioning 0771 system system
     
 on boot
     start boot-hal-1-1
