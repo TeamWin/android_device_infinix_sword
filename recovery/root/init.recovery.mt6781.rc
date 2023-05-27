@@ -2,10 +2,10 @@ import /tee.rc
 import /trustonic.rc
 
 on init
+    setprop crypto.ready 1
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
 
 on fs
-    on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     install_keyring
 
 on post-fs
@@ -88,6 +88,9 @@ on property:twrp.all.users.decrypted=true
     stop mobicore
     stop keymaster-4-0
     stop gatekeeper-1-0
+
+on post-fs-data
+    mkdir /data/vendor/key_provisioning 0771 system system
     
 on boot
     start boot-hal-1-1
