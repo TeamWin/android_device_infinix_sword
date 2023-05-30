@@ -2,7 +2,6 @@ import /tee.rc
 import /trustonic.rc
 
 on init
-    setprop crypto.ready 1
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
 
 on fs
@@ -66,9 +65,6 @@ service keymaster-4-0 /system/bin/android.hardware.keymaster@4.0-service.truston
     oneshot
     seclabel u:r:recovery:s0
     
-on property:crypto.ready=1
-    start keymaster-4-0
-    
 on property:hwservicemanager.ready=true
     start mobicore
     start keymaster-4-0
@@ -89,11 +85,6 @@ on property:twrp.decrypt.done=true
     stop keymaster-4-0
     stop gatekeeper-1-0
 
-on property:crypto.ready=0
-    stop mobicore
-    stop keymaster-4-0
-    stop gatekeeper-1-0
-    
 on boot
     start boot-hal-1-1
     start health-hal-2-1

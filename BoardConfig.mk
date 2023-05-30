@@ -137,7 +137,6 @@ BOARD_USES_MTK_HARDWARE := true
 TW_THEME := portrait_hdpi
 TW_DEVICE_VERSION := Nomercy
 RECOVERY_SDCARD_ON_DATA := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TARGET_USES_MKE2FS := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 1200
