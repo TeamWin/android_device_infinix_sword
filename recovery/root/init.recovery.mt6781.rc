@@ -51,9 +51,6 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     group root drmrpc readproc log
     disabled
     seclabel u:r:recovery:s0
-    
-on property:vendor.sys.listener.registered=true
-    start gatekeeper-1-0
 
 service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     user root
@@ -67,6 +64,9 @@ service keymaster-4-0 /system/bin/android.hardware.keymaster@4.0-service.truston
     disabled
     oneshot
     seclabel u:r:recovery:s0
+    
+on property:vendor.sys.listener.registered=true
+    start gatekeeper-1-0
     
 on property:hwservicemanager.ready=true
     start mobicore
