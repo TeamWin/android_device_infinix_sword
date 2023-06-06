@@ -161,6 +161,7 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_USE_TOOLBOX := true
 TW_HAS_MTP := true
 TW_FRAMERATE := 60
+TW_PREPARE_DATA_MEDIA_EARLY := true
 
 # Recovery fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
