@@ -15,7 +15,7 @@ Medium checks
 - [X] all important partitions listed in mount/backup lists
 - [ ] backup/restore to/from external (USB-OTG) storage (not supported by the device) (unable to test right now)
 - [X] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
-- [ ] decrypt /data (no tester)
+- [X] decrypt /data
 - [X] Correct date
 
 
@@ -34,3 +34,4 @@ Minor checks
 - [X] vibrate
 - [X] screenshot
 - [X] partition SD card
+
