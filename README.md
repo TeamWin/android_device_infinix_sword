@@ -13,7 +13,7 @@ Medium checks
 - [X] Screen goes off and on
 - [X] F2FS/EXT4 Support, exFAT/NTFS where supported
 - [X] all important partitions listed in mount/backup lists
-- [X] backup/restore to/from external (USB-OTG) storage (not supported by the device) (unable to test right now)
+- [X] backup/restore to/from external (USB-OTG) storage
 - [X] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
 - [X] decrypt /data
 - [X] Correct date
@@ -27,8 +27,8 @@ Minor checks
 - [X] poweroff
 - [X] battery level
 - [X] temperature
-- [X] encrypted backups (not tested)
-- [X] input devices via USB (USB-OTG) - keyboard, mouse and disks (not supported by the device) (unable to test)
+- [X] encrypted backups
+- [X] input devices via USB (USB-OTG) - keyboard, mouse and disks
 - [ ] USB mass storage export (unable to test)
 - [X] set brightness
 - [X] vibrate
