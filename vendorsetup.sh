@@ -36,6 +36,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_GREEN_LED=0
 	export FOX_ENABLE_APP_MANAGER=1
     export FOX_USE_XZ_UTILS=1
+    export OF_HIDE_NOTCH=1
+	
+	# Navbar
+	export OF_ALLOW_DISABLE_NAVBAR=0
 	
 	# OTA
     export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
@@ -46,8 +50,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_DISABLE_DM_VERITY_FORCED_ENCRYPTION=1
 	
 	# screen settings
-	export OF_SCREEN_H=2340
-	export OF_STATUS_H=80
+	export OF_SCREEN_H=2460
+	export OF_STATUS_H=100
 	export OF_CLOCK_POS=2
 	export OF_STATUS_INDENT_LEFT=48
 	export OF_STATUS_INDENT_RIGHT=48
