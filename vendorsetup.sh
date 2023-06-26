@@ -62,17 +62,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	
 	# flashlight
 	export OF_FLASHLIGHT_ENABLE=0
-
-	# Android 12 Encryption *temporary use until binary.xml file will implement* #
-	export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
-	export OF_SKIP_FBE_DECRYPTION_SDKVERSION=34 # Don't try to decrypt A14(?)
-    
+  
 	# R11
 	export FOX_VERSION="R11.1_1"
 	export FOX_VARIANT=Stable
 	export OF_PATCH_AVB20=1
-	export OF_MAINTAINER="Nomercy"
-	export FOX_ADVANCED_SECURITY=1
+	export OF_MAINTAINER="Nomercy_and_IMY"
 	export OF_USE_TWRP_SAR_DETECT=1
 
 	# run a process after formatting data to work-around MTP issues
