@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/X698
+DEVICE_PATH := device/infinix/sword
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -29,7 +29,7 @@ TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := X698,FULL-64
+TARGET_OTA_ASSERT_DEVICE := sword,FULL-64
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := CY-X698-H812-H

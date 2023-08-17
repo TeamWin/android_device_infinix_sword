@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_X698.mk
+    $(LOCAL_DIR)/twrp_sword.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_X698-eng \
-    twrp_X698-userdebug
+    twrp_sword-eng \
+    twrp_sword-userdebug
